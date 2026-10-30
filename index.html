@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jeet-exe.css">
+    <title>internet corner</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="internetNav">
+                <nav class="navbar navbar-expand-lg"  style="background-color: #fff4d6">
+                    <div class="container-fluid"  style="background-color: #fff4d6">
+                        <div class="name-exe">
+                            <h3>JEET.EXE</h3>
+                        </div>
+                        <!--<a class="navbar-brand" href="#"></a>-->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav ms-auto gap-5">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link" href="#projects">Projects</a>
+                                <a class="nav-link" href="#experiment_lab">Lab</a>
+                                <a class="nav-link" href="my_brain.html">My Brain</a>
+                                <a class="nav-link" href="about.html">About</a>
+                                <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <hr style = "border-top: 2px solid #000000;">
+        </section>
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 hero-left">
+                        <h1>
+                            HELLO,<br>
+                            I'M <span>JEET.</span>
+                        </h1>
+                        <h3>
+                            I build things, break things,
+                            then figure out why they broke.
+                        </h3>
+                        <div class="jx-wrap">
+                            <button class="jx-btn" id="jxRun" type="button">▶ RUN JEET.EXE</button>
+                        
+                            <div class="jx-load jx-hide" id="jxLoad" aria-live="polite">
+                                <div class="jx-lbl"><span id="jxLbl">LOADING JEET.EXE...</span><span id="jxPct">0%</span></div>
+                                <div class="jx-bar"><i id="jxFill"></i></div>
+                            </div>
+                        
+                            <!-- error dialog (the script moves this to <body> so it always sits on top) -->
+                            <div class="jx-ov jx-hide" id="jxOv" role="dialog" aria-modal="true" aria-labelledby="jxTitle">
+                                <div class="jx-win">
+                                    <div class="jx-tb">
+                                        <span id="jxTitle">JEET.EXE - ERROR</span>
+                                        <button id="jxClose" type="button" aria-label="Close">✕</button>
+                                    </div>
+                                    <div class="jx-msg">
+                                        <div class="jx-ico">!</div>
+                                        <div>
+                                            <p class="jx-big">JEET.EXE has stopped working</p>
+                                            <p class="jx-why" id="jxWhy"></p>
+                                        </div>
+                                    </div>
+                                    <div class="jx-acts">
+                                        <a class="jx-btn jx-small" href="#projects">DEBUG</a>
+                                        <a class="jx-btn jx-small jx-pink" href="#experiment_lab">IGNORE</a>
+                                        <button class="jx-btn jx-small jx-blue" id="jxAgain" type="button">RESTART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class = "col-6 col-lg-3 buttons">
+                            <button id = "explore">Explore</button>
+                            <button id = "random">Random</button>
+                        </div> -->
+                    </div>
+                    <div class="col-12 col-lg-6 hero-right">
+                        <img src="computer.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-header">
+            <span class="green-dot"></span>
+            <span class = "section-title">Currently Building</span>
+            <span class="status-line"></span>
+        </div>
+        <section class = "currently-building">
+            <div class="row align-items-center build-info" style="margin: 5px;">
+                <div class = "col-2 build-card">
+                    <img src="brain.png" alt="brain" class = "img-fluid">
+                </div>
+                <div class = "col-6 build-card">
+                    <div class="build-card-2">
+                        <span class = "current-project">AI STUDY ASSISTANT</span>
+                        <span class = "build-description">Read PDFS -> Making Study Notes</span>
+                        <div class="progress custom-progress" style="border: 2px solid #111111;">
+                            <div class="progress-bar" role="progressbar" style="width: 80%; background-color: #ff5c8a;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">80%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "col-4 build-card">
+                    <div class="build-card-3">
+                        <div class="tech-stack">
+                            <span class="project-tech-stack-text">TECH STACK</span>
+                            <span class="project-tech-stack">n8n + ollama + docker</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="project-status-text">STATUS</span>
+                            <div class="status-row">
+                                <span class="green-dot-2"></span>
+                                <span class = "in-progress-text">In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class = "projects" id = "projects">
+            <div class="section-header">
+                <i class="fa-solid fa-folder project-icon" style="font-size: 25px;"></i>
+                <span class = "section-title">PROJECTS</span>
+                <span class="status-line"></span>
+            </div>
+            <div class="row align-items-center project-info">
+                <div class="col-12 col-md-4">
+                    <div class="project-card">
+                        <div class="project-main">
+                            <div class="project-image">
+                                <img src="Panalyser.png" alt="Product_demand_analyser" class="img-fluid">
+                            </div>
+                            <div class="project-title">
+                                <span class = "project-name">Product Demand Analyser</span>
+                                <span class="project-description">tkinter + pandas + matplotlib</span>
+                            </div>
+                        </div>
+                        <a href="projects/Panalyser.html" class ="view">View -></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="project-card">
+                        <div class="project-main">
+                            <div class="project-image">
+                                <img src="wallet.png" alt="retro_computer" class="img-fluid">
+                            </div>
+                            <div class="project-title">
+                                <span class = "project-name">PROFIT-LOSS INSIGHTS</span>
+                                <span class="project-description">pandas + matplotlib + streamlit</span>
+                            </div>
+                        </div>
+                        <a href="projects/profit_loss.html" class = "view">View -></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="project-card">
+                        <div class="project-main">
+                            <div class="project-image">
+                                <img src="success.png" alt="retro_computer" class="img-fluid">
+                            </div>
+                            <div class="project-title">
+                                <span class = "project-name">GITHUB SUCCESS PREDICTOR</span>
+                                <span class="project-description">pandas + ML</span>
+                            </div>
+                        </div>
+                        <a href="projects/github_sp.html" class = "view">View -></a>
+                    </div>
+                </div>
+            </div>
+            <h2 class = "soon-note">OTHER PROJECTS COMMING SOON</h2>
+        </section>
+        <section class="experiment_lab" id = "experiment_lab">
+            <div class="row align-items-center exp-info" style="margin: 5px;">
+                <div class = "col-2 exp-card">
+                    <img src="flask.png" alt="flask" class = "img-fluid">
+                </div>
+                <div class = "col-6 exp-card">
+                    <div class="exp-card-2">
+                        <span class = "exp-title">EXPERIMENT LAB</span>
+                        <span class = "exp-description">Just random experiments, cool stuff and stuff that doesn't make sense</span>
+                    </div>
+                </div>
+                <div class = "col-4 exp-card">
+                    <div class="exp-card-3">
+                        <div class="exp-play">
+                            <button id = "play-button">PLAY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="experiment-output"></div>
+        </section>
+
+        <section class = "footer-neo">
+            <footer>
+                <div class="horz-line"></div>
+                <div class="row align-items-center footer-info">
+                    <div class="col-6 traits">
+                        <p>Builder . Developer . Overthinker</p>
+                    </div>
+                    <div class="col-6 made-by">
+                        <p><span>&copy;</span>2026 JEET <span style="color: red; font-size: 24px;">&hearts;</span></p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="jeet-exe.js"></script>
+</body>
+</html>

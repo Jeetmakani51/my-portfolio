@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub Success Predictor | JEET.EXE</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <main class="container py-4 gsp-page">
+
+        <a href="../index.html" class="gsp-back">
+            ← BACK TO JEET.EXE
+        </a>
+
+        <!-- Project Header -->
+        <header class="gsp-header">
+            <span class="gsp-label">PROJECT FILE / 003</span>
+
+            <h1>GITHUB SUCCESS PREDICTOR<span>.</span></h1>
+
+            <p class="gsp-subtitle">
+                Exploring machine learning to predict GitHub repository success.
+            </p>
+
+            <div class="gsp-tags">
+                <span>PYTHON</span>
+                <span>PANDAS</span>
+                <span>MACHINE LEARNING</span>
+                <span>DATA ANALYSIS</span>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="gsp-panel">
+            <h2>01 / PROJECT OVERVIEW</h2>
+
+            <p>
+                GitHub Success Predictor is a machine-learning project
+                that analyzes repository data to classify repositories
+                into two categories based on a target label.
+            </p>
+
+            <p>
+                The project uses a dataset of 665 cleaned records to train
+                a classification model. Its goal is to explore whether
+                patterns in repository data can help distinguish between
+                the two classes.
+            </p>
+
+            <p>
+                The model achieved approximately 84.96% accuracy on
+                the evaluation set, containing 133 examples.
+            </p>
+
+            <p class="gsp-note">
+                The exact meaning of each class depends on the label
+                definitions used in the dataset. Predictions indicate
+                learned patterns, not guaranteed future success.
+            </p>
+        </section>
+
+        <!-- Screenshot -->
+        <section class="gsp-panel">
+            <h2>02 / MODEL RESULTS</h2>
+
+            <div class="gsp-screenshot">
+                <img
+                    src="../github_sp.png"
+                    alt="GitHub Success Predictor model evaluation results"
+                    loading="lazy"
+                >
+            </div>
+        </section>
+
+        
+        <section class="gsp-panel">
+            <h2>03 / KEY FEATURES</h2>
+
+            <ul>
+                <li>Works with a cleaned dataset of GitHub repository records.</li>
+                <li>Trains a machine-learning classification model.</li>
+                <li>Classifies records into two target categories.</li>
+                <li>Evaluates performance using accuracy, precision, recall and F1-score.</li>
+                <li>Displays a classification report for both classes.</li>
+                <li>Saves the trained model for potential reuse.</li>
+            </ul>
+        </section>
+
+        <section class="gsp-panel">
+            <h2>04 / MODEL PERFORMANCE</h2>
+
+            <div class="gsp-metric">
+                <span class="gsp-metric-label">OVERALL ACCURACY</span>
+                <strong>84.96%</strong>
+                <p>
+                    The model correctly classified approximately 85%
+                    of the 133 examples in the test set.
+                </p>
+            </div>
+
+            <div class="gsp-metric">
+                <span class="gsp-metric-label">
+                    CLASS 0 / UNSUCCESSFUL REPOSITORIES
+                </span>
+
+                <div class="gsp-metric-grid">
+                    <div>
+                        <span>PRECISION</span>
+                        <strong>93%</strong>
+                    </div>
+                    <div>
+                        <span>RECALL</span>
+                        <strong>69%</strong>
+                    </div>
+                    <div>
+                        <span>F1-SCORE</span>
+                        <strong>79%</strong>
+                    </div>
+                </div>
+
+                <p>
+                    When the model predicts unsuccessful, it is correct
+                    about 93% of the time. It identifies 69% of all
+                    actually unsuccessful repositories in the test set.
+                </p>
+            </div>
+
+            <div class="gsp-metric">
+                <span class="gsp-metric-label">
+                    CLASS 1 / SUCCESSFUL REPOSITORIES
+                </span>
+
+                <div class="gsp-metric-grid">
+                    <div>
+                        <span>PRECISION</span>
+                        <strong>82%</strong>
+                    </div>
+                    <div>
+                        <span>RECALL</span>
+                        <strong>96%</strong>
+                    </div>
+                    <div>
+                        <span>F1-SCORE</span>
+                        <strong>88%</strong>
+                    </div>
+                </div>
+
+                <p>
+                    The model identifies 96% of actually successful
+                    repositories in the test set. When it predicts
+                    successful, it is correct about 82% of the time.
+                </p>
+            </div>
+
+            <p class="gsp-note">
+                Precision measures how reliable a prediction is.
+                Recall measures how many actual examples of a class
+                the model identifies. F1-score balances precision
+                and recall.
+            </p>
+        </section>
+
+        <section class="gsp-panel">
+            <h2>05 / DATASET INSIGHTS</h2>
+
+            <p>
+                The cleaned dataset contains 665 records. The target
+                column contains the following class counts:
+            </p>
+
+            <div class="gsp-class-counts">
+                <div>
+                    <span>CLASS 1</span>
+                    <strong>391</strong>
+                    <small>58.8% of records</small>
+                </div>
+
+                <div>
+                    <span>CLASS 0</span>
+                    <strong>274</strong>
+                    <small>41.2% of records</small>
+                </div>
+            </div>
+
+            <p>
+                The dataset contains more class 1 records than class 0
+                records. Evaluating both precision and recall helps
+                provide a more complete picture than accuracy alone.
+            </p>
+        </section>
+
+        
+        <section class="gsp-panel">
+            <h2>06 / WHAT I LEARNED</h2>
+
+            <ul>
+                <li>Preparing and cleaning data for machine learning.</li>
+                <li>Training and evaluating a classification model.</li>
+                <li>Understanding precision, recall, F1-score and accuracy.</li>
+                <li>Examining class distribution in a dataset.</li>
+                <li>Saving a trained model for later use.</li>
+            </ul>
+        </section>
+
+        
+        <section class="gsp-panel">
+            <h2>07 / TECH STACK</h2>
+
+            <div class="gsp-tags">
+                <span>PYTHON</span>
+                <span>PANDAS</span>
+                <span>SCIKIT-LEARN</span>
+                <span>MACHINE LEARNING</span>
+            </div>
+        </section>
+
+        
+        <section class="gsp-panel">
+            <h2>08 / PROJECT LINKS</h2>
+
+            <p>
+                Explore the source code or access the project
+                using the links below.
+            </p>
+
+            <div class="gsp-actions">
+                <a href="https://github.com/Jeetmakani51/Github_repo_success_predictor" class="gsp-button"  target="_blank"
+                rel="noopener noreferrer">VIEW SOURCE CODE ↗</a>
+                <a href="https://github.com/Jeetmakani51/Github_repo_success_predictor" class="gsp-button"  target="_blank"
+                rel="noopener noreferrer">GET PROJECT ↗</a>
+            </div>
+        </section>
+
+        <footer class="gsp-footer">
+            JEET.EXE / END OF FILE
+        </footer>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,253 @@
+/* JEET.EXE crash feature: styles. Every class is prefixed "jx-" so nothing clashes with style.css */
+
+:root {
+  --jx-ink: #111;
+  --jx-card: #fffdf5;
+  --jx-yellow: #ffd23f;
+  --jx-pink: #ff5c8a;
+  --jx-blue: #4a6cf7;
+}
+
+/* Hides your old Explore / Random buttons without editing the HTML
+   (keeps script.js happy if it looks for #explore / #random).
+   Delete this rule if you ever want them back. */
+.hero-left .buttons {
+  display: none !important;
+}
+
+.jx-hide {
+  display: none !important;
+}
+.jx-wrap {
+  margin-top: 28px;
+}
+
+/* buttons */
+.jx-btn {
+  display: inline-block;
+  font:
+    700 18px Consolas,
+    "Courier New",
+    monospace;
+  color: var(--jx-ink);
+  background: var(--jx-yellow);
+  border: 4px solid var(--jx-ink);
+  border-radius: 0;
+  padding: 14px 22px;
+  box-shadow: 8px 8px 0 var(--jx-ink);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    transform 0.1s,
+    box-shadow 0.1s;
+}
+.jx-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 var(--jx-ink);
+  color: var(--jx-ink);
+}
+.jx-btn:active {
+  transform: translate(6px, 6px);
+  box-shadow: 2px 2px 0 var(--jx-ink);
+}
+.jx-btn.jx-pink {
+  background: var(--jx-pink);
+}
+.jx-btn.jx-blue {
+  background: var(--jx-blue);
+  color: #fff;
+}
+.jx-btn.jx-blue:hover {
+  color: #fff;
+}
+.jx-btn.jx-small {
+  font-size: 15px;
+  padding: 10px 16px;
+  box-shadow: 5px 5px 0 var(--jx-ink);
+}
+
+/* loading bar (same look as your pink progress bar) */
+.jx-load {
+  max-width: 420px;
+}
+.jx-lbl {
+  display: flex;
+  justify-content: space-between;
+  font:
+    700 14px Consolas,
+    "Courier New",
+    monospace;
+  margin-bottom: 8px;
+}
+.jx-bar {
+  height: 34px;
+  border: 4px solid var(--jx-ink);
+  border-radius: 10px;
+  background: var(--jx-card);
+  overflow: hidden;
+  box-shadow: 6px 6px 0 var(--jx-ink);
+}
+.jx-bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--jx-pink);
+}
+
+/* clickable computer sticker */
+.jx-clickable {
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.jx-clickable:hover {
+  transform: rotate(-2deg) scale(1.03);
+}
+
+/* crash effect on the headline */
+.jx-crash {
+  animation:
+    jx-shake 0.5s,
+    jx-glitch 0.6s;
+}
+
+/* error dialog */
+.jx-ov {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(17, 17, 17, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.jx-win {
+  width: 100%;
+  max-width: 460px;
+  background: var(--jx-card);
+  border: 4px solid var(--jx-ink);
+  box-shadow: 12px 12px 0 var(--jx-ink);
+  animation: jx-pop 0.25s cubic-bezier(0.2, 1.6, 0.4, 1);
+}
+.jx-tb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--jx-blue);
+  color: #fff;
+  font:
+    700 14px Consolas,
+    "Courier New",
+    monospace;
+  padding: 8px 10px;
+  border-bottom: 4px solid var(--jx-ink);
+}
+.jx-tb button {
+  font:
+    700 14px Consolas,
+    monospace;
+  background: var(--jx-pink);
+  color: var(--jx-ink);
+  border: 3px solid var(--jx-ink);
+  border-radius: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  cursor: pointer;
+}
+.jx-msg {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 22px 20px 8px;
+}
+.jx-ico {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  background: var(--jx-yellow);
+  border: 4px solid var(--jx-ink);
+  font:
+    900 32px "Arial Black",
+    Helvetica,
+    sans-serif;
+  transform: rotate(-6deg);
+}
+.jx-big {
+  font:
+    700 20px Consolas,
+    "Courier New",
+    monospace;
+  margin: 0 0 6px;
+}
+.jx-why {
+  font:
+    14px Consolas,
+    "Courier New",
+    monospace;
+  margin: 0;
+  opacity: 0.8;
+}
+.jx-acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 18px 20px 24px;
+}
+
+@keyframes jx-shake {
+  0%,
+  100% {
+    transform: none;
+  }
+  20% {
+    transform: translate(-8px, 4px);
+  }
+  40% {
+    transform: translate(8px, -6px);
+  }
+  60% {
+    transform: translate(-6px, -3px);
+  }
+  80% {
+    transform: translate(5px, 6px);
+  }
+}
+@keyframes jx-glitch {
+  0%,
+  100% {
+    text-shadow: none;
+  }
+  30% {
+    text-shadow:
+      5px 0 var(--jx-pink),
+      -5px 0 var(--jx-blue);
+  }
+  60% {
+    text-shadow:
+      -4px 0 var(--jx-pink),
+      4px 0 var(--jx-blue);
+  }
+}
+@keyframes jx-pop {
+  from {
+    transform: scale(0.7) rotate(-3deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jx-crash,
+  .jx-win {
+    animation: none;
+  }
+  .jx-clickable:hover {
+    transform: none;
+  }
+}
